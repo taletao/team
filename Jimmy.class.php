@@ -1,6 +1,6 @@
 <?php
 
-class Leader {
+class Jimmy extends Programmer {
 
     private $__name = null;
     protected $_gender = null;
@@ -8,23 +8,27 @@ class Leader {
     var $position = null;
     private $__trait = null;
 
-    function getTask($task, $content) {
-        $type = $this->__think($task);
-        return $this->__assignTask($task, $type, $content);
+    function __construct() {
+        $this->__name = 'Jimmy';
+        $this->__gender = '男';
+        $this->__age = '28';
+        $this->position = 'PHP程序员';
+        $this->__trait = '思考、统筹、分配';
     }
-    
+
     function createTask($task, $receivers) {
         return $this->assignTask($task, $receivers);
     }
 
     function assignTask($task, $receivers = array()) {
-        $tasks = array();
-        $type_array = array(
-            1 => array('carb'),
-            2 => array('dragon', 'tale'),
-            3 => array('dragon', 'carb', 'tale'),
-        );
-        return finish_time;
+
+        if (!$task || empty($receivers) || !is_array($receivers)) {
+            return false;
+        }
+        foreach ($receivers as $key => $value) {
+            $key = new $value();
+            $key->getTask($task, $this->__name);
+        }
     }
 
     function talkAboutTask($receivers, $taskContent) {

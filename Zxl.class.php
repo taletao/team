@@ -1,12 +1,16 @@
 <?php
 
-class PhpProgrammer {
+class Zxl extends Programmer {
+    
+    protected $blood = '钟氏';
 
-    $this->__name = '';
-    $this->_gender = '';
-    $this->_age = '';
-    $this->position = '';
-    $this->_trait = '';
+    function __construct() {
+        $this->__name = 'zxl';
+        $this->_gender = '男';
+        $this->_age = '20';
+        $this->position = 'PHP程序员';
+        $this->_trait = 'PHP程序编写';
+    }
 
     function setName($name) {
         $this->__name = $name;
