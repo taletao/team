@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="" name="pgv">
+<title>Test</title>
+<script src="cookie.js"></script>
+<script type="text/javascript">
+var cishu = getCookie('cishu');
+
+if(cishu>0){
+	alert('你已经抽过奖了1！');
+}
+function choujiang(){
+	if(cishu>0){
+		alert('你已经抽过奖了2！');
+	}
+	setCookie("cishu","1","s20");
+}
+</script>
+
+<body>
+<input type="button" onclick="choujiang()" value="抽奖" />
+</body>
+</html>
